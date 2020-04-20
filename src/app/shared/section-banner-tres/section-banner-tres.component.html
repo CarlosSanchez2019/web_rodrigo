@@ -1,0 +1,66 @@
+<section class="contenedor-contacto" style="background-image: url('./assets/img/calle-uruguay-nocturna.jpg');">
+    <div class="container">
+        <div class="contenedor-form">
+            <h3>Contáctame</h3>
+            <form [formGroup]="contactoForm" (ngSubmit)="send(contactoForm.value)">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" class="form-control" placeholder="Nombre"
+                                formControlName="name" required>
+                            <div class="alert alert-danger mt-2" role="alert"
+                                *ngIf="name.invalid && (name.dirty || name.touched)">
+                                <div *ngIf="name.errors.required">
+                                    El nombre es requerido
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" class="form-control" placeholder="Apellido"
+                                formControlName="lastName">
+                                <div class="alert alert-danger mt-2" role="alert"
+                                *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+                                <div *ngIf="lastName.errors.required">
+                                    El Apellido es requerido
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="nombre@example.com" formControlName="email">
+                        <div class="alert alert-danger mt-2" role="alert"
+                                *ngIf="email.invalid && (email.dirty || email.touched)">
+                                <div *ngIf="email.errors.required">
+                                    El Correo Electrónico es requerido
+                                </div>
+                            </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Asunto</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Mensaje"
+                        formControlName="message"></textarea>
+                        <div class="alert alert-danger mt-2" role="alert"
+                                *ngIf="message.invalid && (message.dirty || message.touched)">
+                                <div *ngIf="message.errors.required">
+                                    El asunto es requerido
+                                </div>
+                            </div>
+
+                </div>
+                <div class="form-group">
+                    <button type="submit" [disabled]="contactoForm.invalid">
+                        <i class="far fa-paper-plane"></i>
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

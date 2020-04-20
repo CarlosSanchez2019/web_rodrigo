@@ -1,0 +1,53 @@
+.contenedor-contacto {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg,#a2485b 5%,rgba(219,219,219,0) 100%);
+    }
+    .contenedor-form{
+        position: absolute;
+        top: 50%;
+        transform: translate(0,-50%);
+        width: 80%;
+        margin: auto;
+        z-index: 100;
+
+        h3{
+            text-transform: uppercase;
+            text-align: center;
+            color: #f7ba1e;
+            font-size: 2em;
+            font-weight: bold;
+        }
+    }
+}
+label {
+    color: #f7ba1e;
+
+}
+button{
+    border: none;
+    background: none;
+    outline: none;
+    
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #f7ba1e;
+    color: #a2485b;
+
+    &:disabled {
+        background: darken(#f7ba1e, 10%);
+        cursor: not-allowed;
+    }
+}

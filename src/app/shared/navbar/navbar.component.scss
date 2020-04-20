@@ -1,0 +1,34 @@
+nav {
+    background: #f7ba1e;
+
+    .bold{
+        font-size: 1.5em;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        span{
+            display: block;
+            font-size: .9em;
+            font-weight: lighter;
+            text-transform: capitalize;
+            text-align: center;
+            margin-top: -10px;
+        }
+    }
+
+    a{
+        color:#a2485b !important;
+
+        &.active{
+            background: #a2485b;
+            color: #f7ba1e !important;
+        }
+    }
+    button{
+        background: #a2485b;
+        color: #f7ba1e
+        
+    }
+
+}

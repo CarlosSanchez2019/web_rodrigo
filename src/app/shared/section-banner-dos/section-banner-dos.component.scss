@@ -1,0 +1,40 @@
+.contenedor-banner-palacio{
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg,#f7ba1e 5%,rgba(219,219,219,0) 100%);
+    }
+    .container-quien-soy {
+        position: absolute;
+        top: 50%;
+        transform: translate(0,-50%);
+        width: 80%;
+        z-index: 100;
+
+        h3{
+            color:#fff;
+            font-size: 2.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color:#a2485b;
+
+        }
+        p {
+            width: 100%;
+            // color:#a2485b;
+            color:#fff;
+            font-size: 1.2em;
+        }
+    }
+
+}
