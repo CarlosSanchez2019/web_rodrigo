@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,9 @@ import { SectionBannerComponent } from './shared/section-banner/section-banner.c
 import { SectionBannerDosComponent } from './shared/section-banner-dos/section-banner-dos.component';
 import { SectionBannerTresComponent } from './shared/section-banner-tres/section-banner-tres.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SectionBannerCuatroComponent } from './shared/section-banner-cuatro/section-banner-cuatro.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 
 @NgModule({
   declarations: [
@@ -17,13 +21,16 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     IndexComponent,
     SectionBannerComponent,
     SectionBannerDosComponent,
-    SectionBannerTresComponent
+    SectionBannerTresComponent,
+    SectionBannerCuatroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
