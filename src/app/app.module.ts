@@ -12,6 +12,7 @@ import { SectionBannerTresComponent } from './shared/section-banner-tres/section
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SectionBannerCuatroComponent } from './shared/section-banner-cuatro/section-banner-cuatro.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     SectionBannerComponent,
     SectionBannerDosComponent,
     SectionBannerTresComponent,
-    SectionBannerCuatroComponent
+    SectionBannerCuatroComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@
             <form [formGroup]="contactoForm" (ngSubmit)="send(contactoForm.value)">
                 <div class="form-group">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-md-6">
                             <label for="name">Nombre</label>
                             <input type="text" id="name" class="form-control" placeholder="Nombre"
                                 formControlName="name" required>
@@ -16,7 +16,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-md-6">
                             <label for="apellido">Apellido</label>
                             <input type="text" id="apellido" class="form-control" placeholder="Apellido"
                                 formControlName="lastName">

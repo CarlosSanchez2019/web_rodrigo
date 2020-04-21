@@ -18,10 +18,10 @@
         position: absolute;
         top: 50%;
         transform: translate(0,-50%);
-        width: 80%;
+        width: 100%;
+        max-width: 1080px;
         margin: auto;
         z-index: 100;
-
         h3{
             text-transform: uppercase;
             text-align: center;

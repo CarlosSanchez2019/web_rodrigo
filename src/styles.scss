@@ -1,3 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+$colorUno: #a2485b;
+$colorDos: #f7ba1e;
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $colorUno;
+    border-radius: 5px;
+
+    &:hover {
+        background: darken($colorUno, 10);
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    &:active {
+        background-color: lighten($colorUno, 10);
+    }
+}
+::-webkit-scrollbar-track {
+    background: $colorDos;
+    border-radius: 4px;
+
+    &:hover,
+    &:active {
+        background: lighten($colorDos, 10);
+        
+    }
+}

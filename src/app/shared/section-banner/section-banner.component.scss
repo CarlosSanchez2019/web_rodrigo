@@ -4,20 +4,27 @@ section{
     display: flex;
     transform: translate(0,60px);
     margin-bottom: 60px;
+    flex-wrap: wrap;
+
+
     .contenedor-foto{
         width: 50%;
         height: 100%;
         background-size: cover;
+        background-position: center center;
+        
     }
 
     .contenedor-introduccion{
         width: 50%;
-        
+    
         
         .contenedor-propuestas{
             width: 100%;
             height: 50%;
             display: flex;
+            flex-wrap: wrap;
+
             .contenedor-propuestas-uno {
                 width: 50%;
                 height: 100%;
@@ -28,7 +35,7 @@ section{
                 align-items: center;
                 flex-direction: column;
                 padding: 20px;
-
+                
                 h4{
                     font-weight: bold;
                     text-align: center;
@@ -48,6 +55,7 @@ section{
                 align-items: center;
                 flex-direction: column;
                 padding: 20px;
+                
                 h4{
                     font-weight: bold;
                     text-align: center;
