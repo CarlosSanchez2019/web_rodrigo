@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-
+import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -13,6 +13,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SectionBannerCuatroComponent } from './shared/section-banner-cuatro/section-banner-cuatro.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FooterComponent } from './shared/footer/footer.component';
+import { RedesSocialesComponent } from './shared/redes-sociales/redes-sociales.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     SectionBannerDosComponent,
     SectionBannerTresComponent,
     SectionBannerCuatroComponent,
-    FooterComponent
+    FooterComponent,
+    RedesSocialesComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    NgxTwitterTimelineModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,16 +12,17 @@ export class SectionBannerCuatroComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
+    mouseDrag: true,
+    lazyLoad:true,
     touchDrag: false,
     pullDrag: false,
-    dots: true,
-    autoWidth:true,
-    autoHeight:true,
-    autoplay:true,
     margin:10,
+    autoplay:true,
+    autoplayHoverPause:true,
+    dots: true,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
@@ -31,11 +32,12 @@ export class SectionBannerCuatroComponent implements OnInit {
       600: {
         items: 2
       },
-      900: {
+      1000: {
         items: 3
       }
     },
-    nav: true
+    nav: false
   }
+
 
 }

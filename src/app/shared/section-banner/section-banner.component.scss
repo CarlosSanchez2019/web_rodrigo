@@ -5,16 +5,30 @@ section{
     flex-wrap: wrap;
     margin-top: 79px;
 
+    @media screen and (max-width: 768px) {
+       
+        height: 150vh;
+      }
+
     .contenedor-foto {
         width: 50%;
         height: 100%;
         background-size: cover;
         background-position: top center;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            height: 50%;
+        }
+
     }
     .contenedor-introduccion {
 
         width: 50%;
         height: 100%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            height: 50%;
+        }
 
         .contenedor-titulo {
             width: 100%;
@@ -26,6 +40,10 @@ section{
             h1 {
                 text-transform: uppercase;
                 font-weight: 900;
+
+                @media screen and (max-width:375px) {
+                    font-size: .9em;
+                }
                 span {
                     text-transform: capitalize;
                     color: #ccc;
@@ -60,6 +78,8 @@ section{
             display: flex;
             flex-wrap: wrap;
 
+            
+
             .contenedor-propuestas-uno {
                 width: 50%;
                 height: 100%;
@@ -73,7 +93,11 @@ section{
                 h4, p{
                     width: 80%;
                     margin: auto;
-                    text-align: center;                    
+                    text-align: center;
+                    
+                    @media screen and (max-width: 768px) {
+                        font-size: .8em;
+                    }
                 }
                 h4 {
                     font-weight: bold;
@@ -92,7 +116,11 @@ section{
                 h4, p{
                     width: 80%;
                     margin: auto;
-                    text-align: center;                    
+                    text-align: center;    
+                    
+                    @media screen and (max-width: 768px) {
+                        font-size: .8em;
+                    }
                 }
                 h4 {
                     font-weight: bold;

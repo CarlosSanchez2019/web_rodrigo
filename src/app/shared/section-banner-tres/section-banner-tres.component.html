@@ -1,66 +1,55 @@
 <section class="contenedor-contacto" style="background-image: url('./assets/img/calle-uruguay-nocturna.jpg');">
-    <div class="container">
-        <div class="contenedor-form">
-            <h3>Contáctame</h3>
+    <div class="contenedor-titulo-formulario">
+        <div class="titulo-formulario">
+            <h4>Contáctame</h4>
+        </div>
+        <div class="formulario">
             <form [formGroup]="contactoForm" (ngSubmit)="send(contactoForm.value)">
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" class="form-control" placeholder="Nombre"
-                                formControlName="name" required>
-                            <div class="alert alert-danger mt-2" role="alert"
-                                *ngIf="name.invalid && (name.dirty || name.touched)">
-                                <div *ngIf="name.errors.required">
-                                    El nombre es requerido
-                                </div>
-                            </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputName">Nombre</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Nombre"
+                            formControlName="name">
+                        <div class="alert alert-danger" role="alert"
+                            *ngIf="name.invalid && (name.dirty || name.touched)">
+                            El Nombre es requerido
                         </div>
-                        <div class="col-md-6">
-                            <label for="apellido">Apellido</label>
-                            <input type="text" id="apellido" class="form-control" placeholder="Apellido"
-                                formControlName="lastName">
-                                <div class="alert alert-danger mt-2" role="alert"
-                                *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
-                                <div *ngIf="lastName.errors.required">
-                                    El Apellido es requerido
-                                </div>
-                            </div>
-
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputLastName">Apellido</label>
+                        <input type="text" class="form-control" id="inputLastName" placeholder="Apellido"
+                            formControlName="lastName">
+                        <div class="alert alert-danger" role="alert"
+                            *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+                            El Apellido es requerido
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="nombre@example.com" formControlName="email">
-                        <div class="alert alert-danger mt-2" role="alert"
-                                *ngIf="email.invalid && (email.dirty || email.touched)">
-                                <div *ngIf="email.errors.required">
-                                    El Correo Electrónico es requerido
-                                </div>
-                            </div>
-
+                    <label for="inputEmail">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="contacto@contacto.com"
+                        formControlName="email">
+                    <div class="alert alert-danger" role="alert"
+                        *ngIf="email.invalid && (email.dirty || email.touched)">
+                        <div *ngIf="email.errors.required">
+                            El Correo Electrónico es requerido
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Asunto</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Mensaje"
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"
                         formControlName="message"></textarea>
-                        <div class="alert alert-danger mt-2" role="alert"
-                                *ngIf="message.invalid && (message.dirty || message.touched)">
-                                <div *ngIf="message.errors.required">
-                                    El asunto es requerido
-                                </div>
-                            </div>
-
+                    <div class="alert alert-danger" role="alert" *ngIf="message.invalid && (message.dirty || message.touched)">
+                        El Asunto es requerido
+                    </div>
                 </div>
-                <div class="form-group">
-                    <button type="submit" [disabled]="contactoForm.invalid">
-                        <i class="far fa-paper-plane"></i>
-                        Enviar
-                    </button>
-                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="!contactoForm.valid">
+                    <i class="far fa-paper-plane"></i> Enviar
+                </button>
             </form>
+
         </div>
     </div>
+
 </section>
