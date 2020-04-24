@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InstagramService } from 'src/app/service/instagram.service';
 
 @Component({
   selector: 'app-redes-sociales',
@@ -7,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RedesSocialesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private instagramService: InstagramService) { }
 
   ngOnInit(): void {
     (<any>window).twttr.widgets.load();
+
+    // this.instagramService.getInstagram()
+    //   .subscribe(res => console.log(res))
   }
 
 }

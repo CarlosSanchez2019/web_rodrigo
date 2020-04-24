@@ -1,9 +1,9 @@
 footer {
     width: 100%;
     height: 25vh;
-
     display: flex;
-    background: #a2485b;
+    flex-wrap: wrap;
+    background: #f7ba1e;
 
     .contenedor-pie-uno,
     .contenedor-pie-dos {
@@ -20,7 +20,7 @@ footer {
             text-transform: uppercase;
             font-size: 2.5em;
             font-weight: bold;
-            color: #f7ba1e;
+            color: #a2485b;
         }
     }
 
@@ -35,19 +35,18 @@ footer {
             align-items: center;
             width: 50px;
             height: 50px;
-            border: 1px solid #f7ba1e;
+            border: 1px solid #a2485b;
             margin-left: 20px;
             border-radius: 50%;
-            transition: all .5s;
-            
+            transition: all 0.5s;
+
             &:hover {
                 transform: scale(1.1);
             }
             svg {
                 font-size: 1.5em;
-                color: #f7ba1e;
+                color: #a2485b;
             }
         }
     }
-     
 }

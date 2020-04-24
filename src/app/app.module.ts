@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -14,6 +13,8 @@ import { SectionBannerCuatroComponent } from './shared/section-banner-cuatro/sec
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FooterComponent } from './shared/footer/footer.component';
 import { RedesSocialesComponent } from './shared/redes-sociales/redes-sociales.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InstagramService } from './service/instagram.service';
 
 
 @NgModule({
@@ -35,9 +36,9 @@ import { RedesSocialesComponent } from './shared/redes-sociales/redes-sociales.c
     ReactiveFormsModule,
     BrowserAnimationsModule,
     CarouselModule,
-    NgxTwitterTimelineModule
+    HttpClientModule
   ],
-  providers: [],
+  providers: [InstagramService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
