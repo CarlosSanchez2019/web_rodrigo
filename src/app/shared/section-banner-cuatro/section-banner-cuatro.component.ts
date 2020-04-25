@@ -31,7 +31,7 @@ export class SectionBannerCuatroComponent implements OnInit {
     loop: true,
     mouseDrag: true,
     lazyLoad: true,
-    touchDrag: false,
+    touchDrag: true,
     pullDrag: false,
     margin: 10,
     autoplay: true,
