@@ -21,9 +21,12 @@
                 <h3>Instagram</h3>
                 <div class="contenedor-instagram-fotos">
                     <div class="instagram-fotos" *ngFor="let image of instagram">
-                        <img src="{{image.node.display_url}}" alt="{{image.node.accessibility_caption}}">
+                        <a href="https://www.instagram.com/p/{{image.node.shortcode}}/" target="_blank">
+                            <img src="{{image.node.display_url}}" alt="{{image.node.accessibility_caption}}">
+
+                        </a>
                         <div class="container-heart-like">
-                            <i class="far fa-heart"></i>
+                            <i class="fas fa-heart"></i>
                             <p>{{image.node.edge_liked_by.count}}</p>
                         </div>
                     </div>
