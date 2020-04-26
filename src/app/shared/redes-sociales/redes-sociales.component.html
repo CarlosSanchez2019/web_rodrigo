@@ -19,10 +19,15 @@
         <div class="contenedor-instagram">
             <div class="titulo-redes">
                 <h3>Instagram</h3>
-                <!-- SnapWidget -->
-                <iframe src="https://snapwidget.com/embed/818310" class="snapwidget-widget" allowtransparency="true"
-                    frameborder="0" scrolling="no"
-                    style="border:none; overflow:hidden;   height:500px"></iframe>
+                <div class="contenedor-instagram-fotos">
+                    <div class="instagram-fotos" *ngFor="let image of instagram">
+                        <img src="{{image.node.display_url}}" alt="{{image.node.accessibility_caption}}">
+                        <div class="container-heart-like">
+                            <i class="far fa-heart"></i>
+                            <p>{{image.node.edge_liked_by.count}}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

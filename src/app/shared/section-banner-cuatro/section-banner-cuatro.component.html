@@ -3,25 +3,35 @@
         <h3>Medios</h3>
         <owl-carousel-o [options]="customOptions">
             <ng-template carouselSlide>
-                <a class="popup-youtube" href="https://www.youtube.com/watch?v=5q3HoxD5n2g"
-                    title="Rodrigo Albernaz - Canal 4 Salto">
+                <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/5q3HoxD5n2g">
                     <img src="./assets/img/entrevista-canal-4.png" alt="">
-                </a><br>
+                  </a>
             </ng-template>
             <ng-template carouselSlide>
-                <a class="popup-youtube" href="https://www.youtube.com/watch?v=5q3HoxD5n2g"
-                    title="Rodrigo Albernaz - Canal 4 Salto">
-                    <img src="./assets/img/entrevista-canal-4.png" alt="">
-                </a><br>
+                <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/_gJ3g6xgODo">
+                    <img src="./assets/img/entrevista-canal-8.png" alt="">
+                  </a>
             </ng-template>
             <ng-template carouselSlide>
-                <a class="popup-youtube" href="https://www.youtube.com/watch?v=5q3HoxD5n2g"
+                <!-- <a class="popup-youtube" href="https://www.youtube.com/watch?v=5q3HoxD5n2g"
                     title="Rodrigo Albernaz - Canal 4 Salto">
                     <img src="./assets/img/entrevista-canal-4.png" alt="">
-                </a><br>
+                </a><br> -->
             </ng-template>
+            
         </owl-carousel-o>
-
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div>
+                            <iframe width="100%" height="350" src=""></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
