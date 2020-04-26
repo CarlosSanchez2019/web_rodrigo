@@ -18,7 +18,6 @@ export class RedesSocialesComponent implements OnInit {
     this.instagramService.getInstagram()
       .subscribe(res => {
         this.instagram = res.graphql.user.edge_owner_to_timeline_media.edges;
-        console.log(res)
       })
 
   }
