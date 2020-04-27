@@ -30,7 +30,7 @@ import { InstagramService } from './service/instagram.service';
     RedesSocialesComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
