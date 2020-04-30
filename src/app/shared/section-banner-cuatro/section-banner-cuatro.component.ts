@@ -2,19 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 declare var jQuery: any;
-declare var $: any
+declare var $: any;
 
 @Component({
   selector: 'app-section-banner-cuatro',
   templateUrl: './section-banner-cuatro.component.html',
-  styleUrls: ['./section-banner-cuatro.component.scss']
+  styleUrls: ['./section-banner-cuatro.component.scss'],
 })
 export class SectionBannerCuatroComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void { }
-  
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -29,17 +28,27 @@ export class SectionBannerCuatroComponent implements OnInit {
     navText: ['', ''],
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       600: {
-        items: 2
+        items: 2,
       },
       1000: {
-        items: 3
-      }
+        items: 3,
+      },
     },
-    nav: false
+    nav: false,
+  };
+  modal() {
+    const data = document
+      .querySelector('.video-modal')
+      .getAttribute('data-theVideo');
+      console.log(data)
+    document.querySelector('.youtube').setAttribute('src', data);
+    document.getElementById('modal').style.display = 'block';
   }
-
-
+  close() {
+    document.getElementById('modal').style.display = 'none';
+    document.querySelector('.youtube').setAttribute('src', '');
+  }
 }

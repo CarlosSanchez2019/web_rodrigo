@@ -1,40 +1,53 @@
 <div class="contenedor-banner-medios">
-    <div class="banner-medios">
-        <h3>Medios</h3>
-        <owl-carousel-o [options]="customOptions">
-            <ng-template carouselSlide>
-                <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/5q3HoxD5n2g">
-                    <img src="./assets/img/entrevista-canal-4.png" alt="">
-                  </a>
-            </ng-template>
-            <ng-template carouselSlide>
-                <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/_gJ3g6xgODo">
-                    <img src="./assets/img/entrevista-canal-8.png" alt="">
-                  </a>
-            </ng-template>
-            <ng-template carouselSlide>
-                <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/_gJ3g6xgODo">
-                    <img src="./assets/img/entrevista-canal-8.png" alt="">
-                  </a>
-            </ng-template>
-            <ng-template carouselSlide>
-                <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/_gJ3g6xgODo">
-                    <img src="./assets/img/entrevista-canal-8.png" alt="">
-                  </a>
-            </ng-template>
-            
-        </owl-carousel-o>
-        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-conten">
-                    <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div>
-                            <iframe width="100%" height="350" src=""></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="banner-medios">
+    <h3>Medios</h3>
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide>
+        <img
+          src="./assets/img/entrevista-canal-4.png"
+          alt=""
+          class="video-modal"
+          (click)="modal()"
+          data-theVideo="https://www.youtube.com/embed/5q3HoxD5n2g"
+        />
+      </ng-template>
+      <ng-template carouselSlide>
+        <img
+          src="./assets/img/entrevista-canal-8.png"
+          alt=""
+          class="video-modal"
+          (click)="modal()"
+          data-theVideo="https://www.youtube.com/embed/_gJ3g6xgODo"
+        />
+      </ng-template>
+      <ng-template carouselSlide>
+        <img
+          src="./assets/img/entrevista-canal-8.png"
+          alt=""
+          class="video-modal"
+          (click)="modal()"
+          data-theVideo="https://www.youtube.com/embed/_gJ3g6xgODo"
+        />
+      </ng-template>
+      <ng-template carouselSlide>
+        <img
+          src="./assets/img/entrevista-canal-8.png"
+          alt=""
+          class="video-modal"
+          (click)="modal()"
+          data-theVideo="https://www.youtube.com/embed/_gJ3g6xgODo"
+        />
+      </ng-template>
+    </owl-carousel-o>
+    <div class="modal" id="modal">
+      <div class="modal-close" id="close" (click)="close()">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="modal-video">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item youtube" src=""></iframe>
         </div>
+      </div>
     </div>
+  </div>
 </div>
